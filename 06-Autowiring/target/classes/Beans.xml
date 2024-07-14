@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+     <bean id="sp" class="in.ashok.it.SonyPrinter" />
+     <bean id="hp" class="in.ashok.it.HPPrinter" primary="true"/>
+	 
+	 <!--<bean id="atm" class="in.ashok.it.ATM" autowire="byName">-->
+		<!--<property name="printer" ref="sp"/> // This is called manual wiring using property tag-->
+	<!-- <bean id="atm" class="in.ashok.it.ATM" autowire="byType"> -->
+		<!-- autowire="constructor"-->
+	  <!--By Defaukt it will go to setter injection -->
+	  <bean id="atm" class="in.ashok.it.ATM" autowire="constructor"> 
+	 <!-- <bean id="atm" class="in.ashok.it.ATM" autowire="no"/>-->
+	<!--	// if we are doing no  autowire its means 0-parameterize constuctor will call and no 
+		// dependency injection will happen-->
+		
+	 </bean>
+     
+</beans>
