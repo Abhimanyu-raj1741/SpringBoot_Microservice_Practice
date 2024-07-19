@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="st" class="in.ashok.it.Student">
+    <property name="id" value="101"/>
+    <property name="name" value="Abhimanyu"/>
+    <!-- <property name="courses" value="C++, Ruby , JAVA "/> This is the  another technique -->
+    <property name="courses">
+		<list>
+			<value>JAVA</value>
+			<value>PYTHON</value>
+			<value>C++</value>
+			<value>RUBY</value>			
+		</list>
+	</property>
+	<property name="hobbies">
+		<set>
+			<value>Football</value>
+			<value>Cricket</value>
+			<value>Computer Game</value>
+			<value>Computer Game</value>
+						
+		</set>
+	</property>
+		<property name="data">
+		<map>
+			<entry key="01" value="Abhimanyu Kumar"/>
+			<entry key="02" value="Kollati Kumar"/>
+			<entry key="03" value="Dinesh Kumar"/>
+			<entry key="05" value="Harish "/>
+			<entry key="04" value="Satish Patra"/>
+			
+						
+		</map>
+	</property>
+	
+      </bean>
+</beans>
