@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  
+  <body>
+    <div>
+		<h2>User Form</h2>
+	    <form th:object="${userObj}" th:action="@{/user}" method="post">
+			<table>
+				<tr>
+					<td>Name : </td>
+					<td> <input type = "text" th:field="*{name}"/> </td>
+				</tr>
+				<tr>
+					<td>Email : </td>
+					<td> <input type = "email" th:field="*{email}"/> </td>
+				</tr>
+				<tr>
+					<td>Phone No. : </td>
+					<td> <input type = "number"  th:field="*{phno}" /> </td>
+				</tr>
+				<tr>
+					<td> </td>
+					<td> <input type="submit" value="Submit"> </td>
+				</tr>
+			</table>
+		</form>
+	</div>
+  </body>
+</html>
